@@ -1,0 +1,74 @@
+/* Copyright (c) 2017 by Bennett Feely (https://codepen.io/bennettfeely/pen/CkHng)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+DEALINGS IN THE SOFTWARE.
+
+*/
+ 
+.animated {
+    display: inline-block;
+    animation: float .3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: none;
+    }
+    33% {
+        transform: translateY(-1px) rotate(-2deg);
+    }
+    66% {
+        transform: translateY(1px) rotate(2deg);
+    }
+}
+ 
+.animated:nth-child(2) {
+    animation-delay: .05s;
+}
+.animated:nth-child(3) {
+    animation-delay: .1s;
+}
+.animated:nth-child(4) {
+    animation-delay: .15s;
+}
+.animated:nth-child(5) {
+    animation-delay: .2s;
+}
+.animated:nth-child(6) {
+    animation-delay: .25s;
+}
+.animated:nth-child(7) {
+    animation-delay: .3s;
+}
+.animated:nth-child(8) {
+    animation-delay: .35s;
+}
+.animated:nth-child(9) {
+    animation-delay: .4s;
+}
+.animated:nth-child(10) {
+    animation-delay: .45s;
+}
+.animated:nth-child(11) {
+    animation-delay: .5s;
+}
+.animated:nth-child(12) {
+    animation-delay: .55s;
+}
+.animated:nth-child(13) {
+    animation-delay: .6s;
+}
+.animated:nth-child(14) {
+    animation-delay: .65s;
+}
