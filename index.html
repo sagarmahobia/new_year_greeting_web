@@ -9,7 +9,7 @@
 
 <head>
     <title>Happy New Year! 2018</title>
- 
+
     <link rel="stylesheet" href="./greeting.css">
     <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="./text-animation.css">
@@ -17,9 +17,19 @@
     <link rel="stylesheet" href="./w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cookie|Freckle+Face|Frijole|Pangolin|Risque" rel="stylesheet">
-
     
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111524143-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-111524143-1');
+
+    </script>
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -59,27 +69,30 @@
     <div class="footer">
         <div class="share-or-create w3-bar">
             <button id="share-button" onclick="onClickShare();" class="w3-button w3-bar-item w3-block w3-black my-button" style="width:50%">Share <i class="fa fa-share-alt-square" aria-hidden="true"></i></button>
-            <button id="create-own-button" onclick="onClickCreateYourOwn();" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Create Your Own <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+            <button id="create-own-button" onclick="onClickCreateYourOwn();" class="my-button w3-button w3-bar-item w3-block w3-black"
+                style="width:50%">Create Your Own <i class="fa fa-plus-square" aria-hidden="true"></i></button>
         </div>
-        
-        <div class="sharer  w3-bar"> 
-             <button onclick="onClickFacebookShare();" id="facebook-button" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Facebook <i class="fa fa-facebook-square facebook-icon" aria-hidden="true"></i></button>
-            <button onclick="onClickWhatsAppShare()"id="whats-app-button" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Whats App <i class="fa fa-whatsapp whats-app-icon" aria-hidden="true"></i></button>
+
+        <div class="sharer  w3-bar">
+            <button onclick="onClickFacebookShare();" id="facebook-button" class="my-button w3-button w3-bar-item w3-block w3-black"
+                style="width:50%">Facebook <i class="fa fa-facebook-square facebook-icon" aria-hidden="true"></i></button>
+            <button onclick="onClickWhatsAppShare()" id="whats-app-button" class="my-button w3-button w3-bar-item w3-block w3-black"
+                style="width:50%">Whats App <i class="fa fa-whatsapp whats-app-icon" aria-hidden="true"></i></button>
 
         </div>
-     
+
         <div class="form">
-            <div    class="input-box-container  ">
+            <div class="input-box-container  ">
                 <input id="input-box" class="input-box w3-input" type="text" placeholder="Your Name">
             </div>
-             <div   class="check-box-container">
-                 <p>
+            <div class="check-box-container">
+                <p>
                     <input id="input-in-advanced" class="check-box w3-check" type="checkbox">
                     <label class="lable-in-advance">In Advance</label>
-                 </p>
-             </div>
-            <div   class="create-button-container  ">
-               <button onclick="onClickCreateNew();" class="create-button my-button w3-button w3-bar-item w3-block w3-white">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                </p>
+            </div>
+            <div class="create-button-container  ">
+                <button onclick="onClickCreateNew();" class="create-button my-button w3-button w3-bar-item w3-block w3-white">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>

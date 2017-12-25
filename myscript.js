@@ -130,8 +130,8 @@ $(document).ready(function () {
         }  
     } else {
         showInAdvanced();
-        setName("Your Name");
-        setTitle("Sagar");
+        setName("Your Name Here");
+        setTitle("Some One");
         hideShare();
     }
 
