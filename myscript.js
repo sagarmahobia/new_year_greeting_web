@@ -23,10 +23,16 @@ function encodeName(senderName) {
 function generateUrl(senderName, inAdvanced) {
     if (senderName != null && senderName !== "") {
 
+        // if (inAdvanced) {
+        //     return getSiteName() + "?n=" + encodeName(senderName) + "&a=t";
+        // } else {
+        //     return getSiteName() + "?n=" + encodeName(senderName);
+        // } 
+        
         if (inAdvanced) {
-            return getSiteName() + "?n=" + encodeName(senderName) + "&a=t";
+            return  "?n=" + encodeName(senderName) + "&a=t";
         } else {
-            return getSiteName() + "?n=" + encodeName(senderName);
+            return  "?n=" + encodeName(senderName);
         }
 
     } else {
