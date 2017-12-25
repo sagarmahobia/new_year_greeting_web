@@ -103,7 +103,7 @@ function onClickCreateNew() {
 
 
 function onClickFacebookShare() {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + generatedUrl, '_blank');
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(generatedUrl), '_blank');
 }
 
 function onClickWhatsAppShare() {
