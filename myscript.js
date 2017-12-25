@@ -1,7 +1,7 @@
 // Functions 
 var generatedUrl = window.location;
 function getSiteName() {
-    return "file:///E:/Projects/Html/Wishes/production/index.html";
+    return window.location.host+"/index.html";
 
 }
 function getParameterByName(name) {
