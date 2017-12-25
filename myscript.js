@@ -56,7 +56,7 @@ function setName(name) {
 }
 
 function setTitle(name){
-    document.title = name +" is wishing you a very Happy New Year";
+    document.title = name +" is wishing you a very Happy New Year!!";
 }
 
 
