@@ -104,7 +104,9 @@ function onClickCreateNew() {
 
         // showSharer();
          generatedUrl = url;
-         window.open(generatedUrl);
+        //  window.open(generatedUrl);
+
+        window.location = generatedUrl;
     }
 }
 
