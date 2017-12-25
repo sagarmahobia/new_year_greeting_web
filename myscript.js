@@ -107,7 +107,7 @@ function onClickFacebookShare() {
 }
 
 function onClickWhatsAppShare() {
-    window.open('whatsapp://send?text=' + document.title.toString() + " click to see ->" + generatedUrl, '_blank');
+    window.open('whatsapp://send?text=' + document.title.toString() + " click to see ->" + encodeURIComponent(generatedUrl), '_blank');
 }
 
 
