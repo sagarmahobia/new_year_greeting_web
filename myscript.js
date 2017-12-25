@@ -98,7 +98,7 @@ function onClickCreateNew() {
 
         // showSharer();
          generatedUrl = url;
-        window.location  = window.location.host+generatedUrl;
+         window.open(generatedUrl);
     }
 }
 
