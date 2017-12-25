@@ -87,18 +87,17 @@ function onClickCreateNew() {
     var inputInAdvanced = $("#input-in-advanced").is(":checked");
     var url = generateUrl(inputName, inputInAdvanced);
     if (url != null) {
-        // setName(inputName);
-        // setTitle(inputName);
-        // if (inputInAdvanced) {
-        //     showInAdvanced();
+        setName(inputName);
+        setTitle(inputName);
+        if (inputInAdvanced) {
+            showInAdvanced();
 
-        // } else {
-        //     hideInAdvanced();
-        // }
+        } else {
+            hideInAdvanced();
+        }
 
-        // showSharer();
-         generatedUrl = url;
-        window.location  = url;
+        showSharer();
+        generatedUrl = url;
     }
 }
 
