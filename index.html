@@ -1,5 +1,9 @@
 <!Doctype html>
+<!--This website is created by Sagar Mahobia(Me) 
+    If you want to contact me you can visit my linked page.
 
+    My LinkedIn profile -> https://www.linkedin.com/in/sagar-mahobia-1b748a13b
+-->
 <html>
 
 <head>
@@ -25,7 +29,10 @@
 
     <div class="greeting">
         <div class="your-name">
-            <span class="animated">CCET</span>
+            <span id="name" class="animated">Your Name</span>
+        </div>
+        <div class="is-text">
+            is
         </div>
         <div class="wishing-you">
             Wishing You
@@ -33,6 +40,9 @@
 
         <div class="advance">
             In Advance
+        </div>
+        <div class="a-very">
+            A Very
         </div>
         <div class="new-year">
             <span class="animated">Happy</span><br>
@@ -47,33 +57,34 @@
 
     <div class="footer">
         <div class="share-or-create w3-bar">
-            <button class="w3-button w3-bar-item w3-block w3-black my-button" style="width:50%">Share <i class="fa fa-share-alt-square" aria-hidden="true"></i></button>
-            <button class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Create Your Own <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+            <button id="share-button" onclick="onClickShare();" class="w3-button w3-bar-item w3-block w3-black my-button" style="width:50%">Share <i class="fa fa-share-alt-square" aria-hidden="true"></i></button>
+            <button id="create-own-button" onclick="onClickCreateYourOwn();" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Create Your Own <i class="fa fa-plus-square" aria-hidden="true"></i></button>
         </div>
         
-        <div class="sharer w3-bar">
-            <button class="my-button w3-button w3-bar-item w3-block w3-black" style="width:33%"><i class="fa fa-clone" aria-hidden="true"></i></button>
-            <button class="my-button w3-button w3-bar-item w3-block w3-black" style="width:34%"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
-            <button class="my-button w3-button w3-bar-item w3-block w3-black" style="width:33%"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+        <div class="sharer  w3-bar"> 
+             <button onclick="onClickFacebookShare();" id="facebook-button" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Facebook <i class="fa fa-facebook-square facebook-icon" aria-hidden="true"></i></button>
+            <button onclick="onClickWhatsAppShare()"id="whats-app-button" class="my-button w3-button w3-bar-item w3-block w3-black" style="width:50%">Whats App <i class="fa fa-whatsapp whats-app-icon" aria-hidden="true"></i></button>
 
         </div>
+     
         <div class="form">
             <div    class="input-box-container  ">
-                <input class="input-box w3-input" type="text" placeholder="Your Name">
+                <input id="input-box" class="input-box w3-input" type="text" placeholder="Your Name">
             </div>
              <div   class="check-box-container">
                  <p>
-                    <input class="check-box w3-check" type="checkbox">
+                    <input id="input-in-advanced" class="check-box w3-check" type="checkbox">
                     <label class="lable-in-advance">In Advance</label>
                  </p>
              </div>
             <div   class="create-button-container  ">
-               <button class="create-button my-button w3-button w3-bar-item w3-block w3-white">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+               <button onclick="onClickCreateNew();" class="create-button my-button w3-button w3-bar-item w3-block w3-white">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>
     <script src="./canvas-script.js" type="text/javascript"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./myscript.js"></script>
 
 </body>
 

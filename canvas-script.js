@@ -147,11 +147,13 @@ document.body.addEventListener("mousemove", function (event) {
     mouseX = event.clientX;
     mouseY = event.clientY;
 });
+ 
 
 window.onresize = function (event) {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
     console.log(event);
+
 }
 
 function createParticle() {

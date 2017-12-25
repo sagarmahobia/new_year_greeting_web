@@ -1,128 +1,126 @@
- 
-
-	html, body {
-		margin: 0px;
-	}
- 
-	canvas {
-		display: block;
-    background: #111;
-      position: fixed; /* or absolute */
-    z-index: -1;     /* put it behind all other elements */
-	}
-
-.greeting{ 
-
-    padding: 0px;
-    padding-top: 25px;
-   
-}
- 
-.your-name,
-    .wishing-you,
-    .advance,
-    .new-year,
-    .t18{
-        text-align: center;
-        color: white;
-        letter-spacing: 5px;
-    
-
-}
-
-.your-name{
-    font-family: "Pangolin";
-    padding: 20px;
-    font-size: 30px;
-}
-.wishing-you{
-       font-size: 35px;
-       padding: 10px;
-       font-family: "Risque";
-}
- 
-.advance{
-    padding: 10px;
-    font-family: "Cookie"; 
-    font-size: 22px;
-}
-
-.new-year{
-    padding-top: 25px;
-    font-family: "Freckle Face";
-    font-size: 55px; 
-    line-height: 65px;
-}
-
-.t18{
-    padding-top: 20px;
-    font-family: "Frijole";
-    font-size: 70px;   
-} 
- 
-.footer{
-    position: fixed;
-    height: 40px; 
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-}
-.my-button{ 
-    font-family: "Risque";
-    font-size: 14px;
-    ;
-}
-
-.my-button i{
-  font-size:16px;
-}
-
-.share-or-create{
-      display: none;
-} 
-.sharer{
+ html,
+ body {
+     margin: 0px;
+ }
+ canvas {
+     display: block;
+     background: #111;
+     position: fixed;
+     /* or absolute */
+     
+     z-index: -1;
+     /* put it behind all other elements */
+ }
+ .greeting {
+     padding: 0px;
+     padding-top: 25px;
+     margin-bottom: 50px;
+ }
+ .your-name,
+ .wishing-you,
+ .advance,
+ .new-year,
+ .t18,
+ .is-text,
+ .a-very {
+     text-align: center;
+     color: white;
+     letter-spacing: 5px;
+ }
+ .is-text {
+     font-size: 25px;
+     padding: 0px;
+     font-family: "Risque";
+ }
+ .your-name {
+     font-family: "Pangolin";
+     padding: 10px;
+     font-size: 30px;
+ }
+ .wishing-you {
+     font-size: 35px;
+     padding: 10px;
+     font-family: "Risque";
+ }
+ .a-very {
+     font-size: 40px;
+     padding: 5px;
+     font-family: "Risque";
+ }
+ .advance {
+     padding: 5px;
+     font-family: "Cookie";
+     font-size: 22px;
      display: none;
-}
-.form{
-    background-color: white;
-    font-family: "Risque"; 
-    width: 100%; 
-    height: 40px;
-
-}
-
-.check-box-container{
-        height: 38px;
-     padding:0px 20px 0px 10px; 
+ }
+ .new-year {
+     padding-top: 5px;
+     font-family: "Freckle Face";
+     font-size: 55px;
+     line-height: 65px;
+ }
+ .t18 {
+     padding-top: 15px;
+     font-family: "Frijole";
+     font-size: 70px;
+ }
+ .footer {
+     position: fixed;
+     height: 40px;
+     width: 100%;
+     bottom: 0px;
+     left: 0px;
+     right: 0px;
+     margin-bottom: 0px;
+ }
+ .my-button {
+     font-family: "Risque";
+     font-size: 14px;
+     ;
+ }
+ .my-button i {
+     font-size: 16px;
+ }
+  
+ .sharer {
+     display: none;
+ }
+ .form {
      background-color: white;
-     width:40%;
-     float:left;
-}
-    .check-box-container p{
-        text-align: center;
-        margin: 0px;
-    }
-
-/*font 12  */
-.input-box ,
-.check-box ,
-.lable-in-advance ,
-.create-button{
-    text-align: center;
-    font-size: 12px;
-    padding-right: 5px !important;
-    padding-left: 5px !important; 
-}
-
-
-.input-box-container{
-    width:35%;
-    float:left;
-}
-
-.create-button-container{
-    width:25%;
-    float:left;
-}
+     font-family: "Risque";
+     width: 100%;
+     height: 40px;
+     display: none;
+ }
+ #share-button-text {
+     display: none;
+ }
+ .check-box-container {
+     height: 38px;
+     padding: 0px 20px 0px 10px;
+     background-color: white;
+     width: 40%;
+     float: left;
+ }
+ .check-box-container p {
+     text-align: center;
+     margin: 0px;
+ }
+  
+ .input-box,
+ .check-box,
+ .lable-in-advance,
+ .create-button {
+     text-align: center;
+     font-size: 12px;
+     padding-right: 5px !important;
+     padding-left: 5px !important;
+ }
+ .input-box-container {
+     width: 35%;
+     float: left;
+ }
+ .create-button-container {
+     width: 25%;
+     float: left;
+ }
