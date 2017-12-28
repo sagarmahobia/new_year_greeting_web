@@ -57,7 +57,9 @@
      }
      .share-or-create {
 
-     } .sharer {
+     }
+     
+     .sharer {
          display: none;
      }
      .form {
@@ -90,4 +92,14 @@
          width: 33%;
          float: left;
      }
+
+      #facebook-button{
+        width: 33%;
+ }
+ #tweet-button{
+        width: 34%;
+ }
+ #whats-app-button{
+        width: 33%;
+ }
  }
