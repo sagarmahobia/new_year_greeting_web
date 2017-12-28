@@ -1,44 +1,43 @@
 // Functions 
 var generatedUrl = window.location;
-function getSiteName() {
-    return window.location.host+"/index.html";
 
-}
+//util methods
+
+
+//return query parameter by key 
 function getParameterByName(name) {
-    url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
+        results = regex.exec(window.location.href);
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 
-function encodeName(senderName) {
-    return encodeURIComponent(senderName);
-    //to be implemented
-}
-
+//generate url 
 function generateUrl(senderName, inAdvanced) {
     if (senderName != null && senderName !== "") {
 
-        // if (inAdvanced) {
-        //     return getSiteName() + "?n=" + encodeName(senderName) + "&a=t";
-        // } else {
-        //     return getSiteName() + "?n=" + encodeName(senderName);
-        // } 
-        
         if (inAdvanced) {
-            return  "?n=" + encodeName(senderName) + "&a=t";
+            return "?n=" + encodeURIComponent(senderName) + "&a=t";
         } else {
-            return  "?n=" + encodeName(senderName);
+            return "?n=" + encodeURIComponent(senderName);
         }
 
     } else {
         return null;
     }
 }
+
+
+//set the title..
+function setTitle(name) {
+    document.title = name + " is wishing you a very Happy New Year!!";
+}
+
+
+//ui minupulation methods..
 
 function showInAdvanced() {
     $(".advance").css({ "display": "block" });
@@ -54,10 +53,10 @@ function setName(name) {
     $("#name").html(name);
 
 }
-
-function setTitle(name){
-    document.title = name +" is wishing you a very Happy New Year!!";
+function increaseMarginBy(val){
+    $(".greeting").css({ "margin-bottom": val+"px" });
 }
+///////////////////
 
 
 function showSharer() {
@@ -78,33 +77,24 @@ function hideShare() {
 function onClickCreateYourOwn() {
     $(".share-or-create").css({ "display": "none" });
     $(".form").css({ "display": "block" });
-    console.log("onClickCreateYourOwn() clicked");
+    increaseMarginBy(120);
+     
 }
 
 function onClickShare() {
     $(".share-or-create").css({ "display": "none" });
     $(".sharer").css({ "display": "block" });
-    console.log("onClickOnClickShare() clicked");
+     
 }
 
 function onClickCreateNew() {
-    console.log("create new");
+     
     var inputName = $("#input-box").val();
     var inputInAdvanced = $("#input-in-advanced").is(":checked");
     var url = generateUrl(inputName, inputInAdvanced);
     if (url != null) {
-        // setName(inputName);
-        // setTitle(inputName);
-        // if (inputInAdvanced) {
-        //     showInAdvanced();
 
-        // } else {
-        //     hideInAdvanced();
-        // }
-
-        // showSharer();
-         generatedUrl = url;
-        //  window.open(generatedUrl);
+        generatedUrl = url;
 
         window.location = generatedUrl;
     }
@@ -120,7 +110,7 @@ function onClickWhatsAppShare() {
 }
 
 
-// A $( document ).ready() block.
+// on ducument loaded.
 $(document).ready(function () {
 
     var name = getParameterByName("n");
@@ -131,15 +121,15 @@ $(document).ready(function () {
 
         setName(name);
         setTitle(name);
-        if (inAdvance != null && inAdvance !== "" && inAdvance === "t") {
-            //user is visiting the greeting page
-            //and in advanced is visible
-
+        if (inAdvance != null 
+            && inAdvance !== "" 
+            && inAdvance === "t") {
+   
             showInAdvanced();
-        }  
+        }
     } else {
         showInAdvanced();
-        setName("Your Name Here");
+        // setName("Your Name Here");
         setTitle("Some One");
         hideShare();
     }
