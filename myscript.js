@@ -33,7 +33,11 @@ function generateUrl(senderName, inAdvanced) {
 
 //set the title..
 function setTitle(name) {
-    document.title = name + " is wishing you a very Happy New Year!!";
+    if (name == null) {
+        document.title = "Welcome to HNYwish.com.create Happy New Year 2018 ! greeting.";
+    } else {
+        document.title = name + " is wishing you a very Happy New Year!! at HNYwish.com ";
+    }
 }
 
 
@@ -53,8 +57,8 @@ function setName(name) {
     $("#name").html(name);
 
 }
-function increaseMarginBy(val){
-    $(".greeting").css({ "margin-bottom": val+"px" });
+function increaseMarginBy(val) {
+    $(".greeting").css({ "margin-bottom": val + "px" });
 }
 ///////////////////
 
@@ -77,26 +81,30 @@ function hideShare() {
 function onClickCreateYourOwn() {
     $(".share-or-create").css({ "display": "none" });
     $(".form").css({ "display": "block" });
-    increaseMarginBy(120);
-     
+    increaseMarginBy(150);
+
 }
 
 function onClickShare() {
     $(".share-or-create").css({ "display": "none" });
     $(".sharer").css({ "display": "block" });
-     
+    increaseMarginBy(150);
 }
 
 function onClickCreateNew() {
-     
+
     var inputName = $("#input-box").val();
-    var inputInAdvanced = $("#input-in-advanced").is(":checked");
-    var url = generateUrl(inputName, inputInAdvanced);
-    if (url != null) {
+    if (inputName.length <= 40) {
+        var inputInAdvanced = $("#input-in-advanced").is(":checked");
+        var url = generateUrl(inputName, inputInAdvanced);
+        if (url != null) {
 
-        generatedUrl = url;
+            generatedUrl = url;
 
-        window.location = generatedUrl;
+            window.location = generatedUrl;
+        }
+    } else {
+        console.log("Name is too long");
     }
 }
 
@@ -105,8 +113,18 @@ function onClickFacebookShare() {
     window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(generatedUrl), '_blank');
 }
 
+function onClickTweet() {
+    var msg = 'https://twitter.com/home/?status=' + encodeURIComponent(generatedUrl);
+
+    if (msg.length <= 140) {
+        window.open(msg, '_blank');
+    } else {
+        console.log("tweet msg is too long (>140).");
+    }
+}
+
 function onClickWhatsAppShare() {
-    window.open('whatsapp://send?text=' + document.title.toString() + " click to see ->" + encodeURIComponent(generatedUrl), '_blank');
+    window.open('whatsapp://send?text=' + document.title.toString() + " click here to open your greeting ->" + encodeURIComponent(generatedUrl), '_blank');
 }
 
 
@@ -121,16 +139,15 @@ $(document).ready(function () {
 
         setName(name);
         setTitle(name);
-        if (inAdvance != null 
-            && inAdvance !== "" 
+        if (inAdvance != null
+            && inAdvance !== ""
             && inAdvance === "t") {
-   
+
             showInAdvanced();
         }
     } else {
         showInAdvanced();
-        // setName("Your Name Here");
-        setTitle("Some One");
+        setTitle(null);
         hideShare();
     }
 

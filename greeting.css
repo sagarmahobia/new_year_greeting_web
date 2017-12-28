@@ -76,7 +76,7 @@
  }
  .my-button {
      font-family: "Risque";
-     font-size: 18px; ;
+     font-size: 16px; ;
  }
  .my-button i {
      font-size: 18px;
@@ -128,5 +128,14 @@
      padding-left: 5px !important;
  }
 
+ #facebook-button{
+        width: 100%;
+ }
+ #tweet-button{
+        width: 100%;
+ }
+ #whats-app-button{
+        width: 100%;
+ }
 
  
