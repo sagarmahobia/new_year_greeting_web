@@ -35,7 +35,6 @@
             google_ad_client: "ca-pub-5244380836127327",
             enable_page_level_ads: true
         });
-
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,41 +46,34 @@
     </canvas>
 
     <div class="greeting">
-        <div class="your-name">
-            <span id="name" class="animated">Your Name</span>
-        </div>
-        <div class="is-text">
-            is
-        </div>
-        <div class="wishing-you">
-            Wishing You
-        </div>
+        <p class="your-name"><span id="name" class="animated">Your Name Here</span></p>
 
-        <div class="advance">
-            In Advance
-        </div>
-        <div class="a-very">
-            A Very
-        </div>
-        <div class="new-year">
+        <p class="is-text">is</p>
+        <p class="wishing-you">Wishing You</p>
+
+        <p class="advance">In Advance</p>
+
+        <p class="a-very">A Very</p>
+        
+        <p class="new-year">
             <span class="animated">Happy</span><br>
             <span class="animated">New </span>
             <span class="animated">Year!</span>
-        </div>
+        </p>
 
-        <div class="t18">
+        <p class="t18">
             <span class="animated">2</span><span class="animated">0</span><span class="animated">1</span><span class="animated">8</span>
-        </div>
+        </p>
     </div>
 
     <div class="footer">
         <div class="share-or-create w3-bar">
-            <button id="share-button" onclick="onClickShare();" class="w3-button w3-bar-item w3-block w3-black my-button" style="width:50%">Share <i class="fa fa-share-alt-square" aria-hidden="true"></i></button>
+            <button id="share-button" onclick="onClickShare();" class="w3-button w3-bar-item w3-block w3-black my-button " style="width:50%">Share <i class="fa fa-share-alt-square" aria-hidden="true"></i></button>
             <button id="create-own-button" onclick="onClickCreateYourOwn();" class="my-button w3-button w3-bar-item w3-block w3-black"
-                style="width:50%">Create Your Own <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                style="width:50%">Create New <i class="fa fa-plus-square" aria-hidden="true"></i></button>
         </div>
 
-        <div class="sharer  w3-bar">
+        <div class="sharer w3-bar">
             <button onclick="onClickFacebookShare();" id="facebook-button" class="my-button w3-button w3-bar-item w3-block w3-black"
                 style="width:50%">Facebook <i class="fa fa-facebook-square facebook-icon" aria-hidden="true"></i></button>
             <button onclick="onClickWhatsAppShare()" id="whats-app-button" class="my-button w3-button w3-bar-item w3-block w3-black"
@@ -91,7 +83,7 @@
 
         <div class="form">
             <div class="input-box-container  ">
-                <input id="input-box" class="input-box w3-input" type="text" placeholder="Your Name">
+                <input id="input-box" class="input-box w3-black w3-hover-dark-grey w3-input w3-border-0" type="text" placeholder="Enter Your Name Here">
             </div>
             <div class="check-box-container">
                 <p>
@@ -100,7 +92,7 @@
                 </p>
             </div>
             <div class="create-button-container  ">
-                <button onclick="onClickCreateNew();" class="create-button my-button w3-button w3-bar-item w3-block w3-white">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                <button onclick="onClickCreateNew();" class="create-button my-button w3-button w3-bar-item w3-block w3-black">Create <i class="fa fa-plus-square" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>
