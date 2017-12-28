@@ -94,18 +94,16 @@ function onClickShare() {
 function onClickCreateNew() {
 
     var inputName = $("#input-box").val();
-    if (inputName.length <= 40) {
-        var inputInAdvanced = $("#input-in-advanced").is(":checked");
-        var url = generateUrl(inputName, inputInAdvanced);
-        if (url != null) {
+    
+    var inputInAdvanced = $("#input-in-advanced").is(":checked");
+    var url = generateUrl(inputName, inputInAdvanced);
+    if (url != null) {
 
-            generatedUrl = url;
+        generatedUrl = url;
 
-            window.location = generatedUrl;
-        }
-    } else {
-        console.log("Name is too long");
+        window.location = generatedUrl;
     }
+    
 }
 
 
@@ -115,12 +113,7 @@ function onClickFacebookShare() {
 
 function onClickTweet() {
     var msg = 'https://twitter.com/share?url=' + encodeURIComponent(generatedUrl);
-
-    if (msg.length <= 140) {
-        window.open(msg, '_blank');
-    } else {
-        console.log("tweet msg is too long (>140).");
-    }
+    window.open(msg, '_blank');
 }
 
 function onClickWhatsAppShare() {
