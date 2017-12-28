@@ -114,7 +114,7 @@ function onClickFacebookShare() {
 }
 
 function onClickTweet() {
-    var msg = 'https://twitter.com/home/?status=' + encodeURIComponent(generatedUrl);
+    var msg = 'https://twitter.com/share?url=' + encodeURIComponent(generatedUrl);
 
     if (msg.length <= 140) {
         window.open(msg, '_blank');
@@ -153,3 +153,5 @@ $(document).ready(function () {
 
 
 });
+
+ 
