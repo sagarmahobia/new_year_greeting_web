@@ -34,7 +34,7 @@ function generateUrl(senderName, inAdvanced) {
 //set the title..
 function setTitle(name) {
     if (name == null) {
-        document.title = "Welcome to HNYwish.com.create Happy New Year 2018 ! greeting.";
+        document.title = "Welcome to HNYwish.com . Create Happy New Year 2018 ! greeting.";
     } else {
         document.title = name + " is wishing you a very Happy New Year!! at HNYwish.com ";
     }
