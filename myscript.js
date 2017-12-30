@@ -124,6 +124,13 @@ function onClickWhatsAppShare() {
 // on ducument loaded.
 $(document).ready(function () {
 
+     $('#input-box').keydown(function(event) {
+        if (event.keyCode == 13) {
+                onClickCreateNew();
+            return false;
+         }
+    });
+
     var name = getParameterByName("n");
     var inAdvance = getParameterByName("a");
 
