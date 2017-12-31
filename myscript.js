@@ -120,6 +120,10 @@ function onClickWhatsAppShare() {
     window.open('whatsapp://send?text=' + document.title.toString() + " click here to open your greeting ->" + encodeURIComponent(generatedUrl), '_blank');
 }
 
+function openFacebook(){ 
+    console.log("");
+    window.open('https://www.facebook.com/HNYwishDotCom/','_blank');
+}
 
 // on ducument loaded.
 $(document).ready(function () {
