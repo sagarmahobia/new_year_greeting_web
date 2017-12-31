@@ -93,9 +93,17 @@
          float: left;
      }
 
+     .social-board{
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+
+}
+
       #facebook-button{
         width: 33%;
  }
+
  #tweet-button{
         width: 34%;
  }
