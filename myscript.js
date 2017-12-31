@@ -16,14 +16,11 @@ function getParameterByName(name) {
 
 
 //generate url 
-function generateUrl(senderName, inAdvanced) {
+function generateUrl(senderName) {
     if (senderName != null && senderName !== "") {
 
-        if (inAdvanced) {
-            return "?n=" + encodeURIComponent(senderName) + "&a=t";
-        } else {
-            return "?n=" + encodeURIComponent(senderName);
-        }
+        return "?n=" + encodeURIComponent(senderName);
+
 
     } else {
         return null;
@@ -42,15 +39,6 @@ function setTitle(name) {
 
 
 //ui minupulation methods..
-
-function showInAdvanced() {
-    $(".advance").css({ "display": "block" });
-}
-
-function hideInAdvanced() {
-    $(".advance").css({ "display": "none" });
-}
-
 
 function setName(name) {
 
@@ -94,16 +82,15 @@ function onClickShare() {
 function onClickCreateNew() {
 
     var inputName = $("#input-box").val();
-    
-    var inputInAdvanced = $("#input-in-advanced").is(":checked");
-    var url = generateUrl(inputName, inputInAdvanced);
+
+    var url = generateUrl(inputName);
     if (url != null) {
 
         generatedUrl = url;
 
         window.location = generatedUrl;
     }
-    
+
 }
 
 
@@ -120,37 +107,31 @@ function onClickWhatsAppShare() {
     window.open('whatsapp://send?text=' + document.title.toString() + " click here to open your greeting ->" + encodeURIComponent(generatedUrl), '_blank');
 }
 
-function openFacebook(){ 
+function openFacebook() {
     console.log("");
-    window.open('https://www.facebook.com/HNYwishDotCom/','_blank');
+    window.open('https://www.facebook.com/HNYwishDotCom/', '_blank');
 }
 
 // on ducument loaded.
 $(document).ready(function () {
 
-     $('#input-box').keydown(function(event) {
+    $('#input-box').keydown(function (event) {
         if (event.keyCode == 13) {
-                onClickCreateNew();
+            onClickCreateNew();
             return false;
-         }
+        }
     });
 
     var name = getParameterByName("n");
-    var inAdvance = getParameterByName("a");
 
 
     if (name != null && name !== "") {
 
         setName(name);
         setTitle(name);
-        if (inAdvance != null
-            && inAdvance !== ""
-            && inAdvance === "t") {
 
-            showInAdvanced();
-        }
     } else {
-        // showInAdvanced();
+
         setTitle(null);
         hideShare();
     }
@@ -158,4 +139,4 @@ $(document).ready(function () {
 
 });
 
- 
+

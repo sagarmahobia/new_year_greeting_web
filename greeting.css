@@ -94,19 +94,8 @@
  #share-button-text {
      display: none;
  }
- .check-box-container {
-     height: 38px;
-     padding: 0px 20px 0px 10px;
-     background-color: black;
-     /* width: 40%; */
-       width: 100%; 
-     float: left;
- }
- .check-box-container p {
-     color: white;
-     text-align: center;
-     margin: 0px;
- }
+ 
+ 
 
   .input-box-container {
      /* width: 35%; */
@@ -118,8 +107,7 @@
      float: left;
  }
 
- .input-box,
- .check-box,
+ .input-box, 
  .lable-in-advance,
  .create-button {
      text-align: center;
