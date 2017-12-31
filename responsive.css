@@ -69,27 +69,20 @@
          height: 40px;
          display: none;
      }
-     .check-box-container {
-         height: 40px;
-         padding: 0px 20px 0px 10px; 
-         background-color: black;
-         width: 34%;
-         float: left;
-     }
+  
      /*font 18 */
      
-     .input-box,
-     .check-box,
+     .input-box, 
      .lable-in-advance,
      .create-button {
          font-size: 18px;
      }
      .input-box-container {
-         width: 33%;
+         width: 50%;
          float: left;
      }
      .create-button-container {
-         width: 33%;
+         width: 50%;
          float: left;
      }
 
