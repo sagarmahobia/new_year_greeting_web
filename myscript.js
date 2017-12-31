@@ -150,7 +150,7 @@ $(document).ready(function () {
             showInAdvanced();
         }
     } else {
-        showInAdvanced();
+        // showInAdvanced();
         setTitle(null);
         hideShare();
     }
