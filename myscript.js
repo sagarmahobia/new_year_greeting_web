@@ -31,9 +31,9 @@ function generateUrl(senderName) {
 //set the title..
 function setTitle(name) {
     if (name == null) {
-        document.title = "Welcome to HNYwish.com . Create Happy New Year 2019 ! greeting.";
+        document.title = "Create Happy New Year 2019 ! greeting.";
     } else {
-        document.title = name + " is wishing you a very Happy New Year!! at HNYwish.com ";
+        document.title = name + " is wishing you a very Happy New Year!! ";
     }
 }
 
@@ -106,12 +106,7 @@ function onClickTweet() {
 function onClickWhatsAppShare() {
     window.open('whatsapp://send?text=' + document.title.toString() + " click here to open your greeting ->" + encodeURIComponent(generatedUrl), '_blank');
 }
-
-function openFacebook() {
-    console.log("");
-    window.open('https://www.facebook.com/HNYwishDotCom/', '_blank');
-}
-
+ 
 // on ducument loaded.
 $(document).ready(function () {
 

@@ -125,24 +125,4 @@
  #whats-app-button{
         width: 100%;
  }
-.social-board{
-    width: 250px;
-    margin: 0 auto;
-    display: block;
-
-}
-
-.facebook-msg{
-    font-family: "Risque";
-    margin: 0px;
-    padding: 10px;
-    text-align: center;
-    color: white;
-
-}
-
-.facebook-like-button{
-    font-family: "Risque";
-    font-size: 18px;
-}
  
