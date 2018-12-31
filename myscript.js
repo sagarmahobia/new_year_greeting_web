@@ -31,7 +31,7 @@ function generateUrl(senderName) {
 //set the title..
 function setTitle(name) {
     if (name == null) {
-        document.title = "Create Happy New Year 2019 ! greeting.";
+        document.title = "Create Happy New Year 2019 Greeting.";
     } else {
         document.title = name + " is wishing you a very Happy New Year!! ";
     }
