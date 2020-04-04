@@ -40,6 +40,7 @@
     </canvas>
 
     <div class="greeting">
+      <button type="button" id="target">Click Me!</button>
         <p class="your-name"><span id="name" class="animated">Your Name Here</span></p>
 
         <p class="is-text">is</p>
@@ -94,6 +95,23 @@
     <script src="./canvas-script.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./myscript.js"></script>
+    <script type="text/javascript">
+
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+    
+    clrs = ["#db1d72","#d324d6","#5f24d6"];
+
+    $("#target" ).click(function() {
+            $("meta[property='theme']").attr("content", clrs[getRandomInt(3)]);
+            console.log(clrs[getRandomInt(3)]);
+    });
+
+        //
+    </script>
+   
 </body>
 
 </html>
